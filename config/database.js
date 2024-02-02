@@ -9,4 +9,4 @@ const connectDB = async() =>{
         console.log(`Mongodb Server Issue ${error}`.bgRed.white );  
     }
 }
-export default connectDB;
+module.exports = connectDB;

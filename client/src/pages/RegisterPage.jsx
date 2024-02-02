@@ -6,8 +6,12 @@ import { useNavigate, Link } from 'react-router-dom';
 function RegisterPage() {
   const navigate = useNavigate();
 
-  const onFinishHandler = (values) => {
-    console.log('Form values:', values);
+  const onFinishHandler = async (values) => {
+    try{
+
+    } catch(error){
+      console.log(error); 
+    }
   };
 
   return (

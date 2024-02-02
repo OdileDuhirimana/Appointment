@@ -2,7 +2,7 @@ const express = require ('express');
 const colors = require('colors');
 const morgan = require('morgan');
 const dotenv = require('dotenv');
-const connectDB = require("./config/db");
+const connectDB = require("./config/database");
 dotenv.config();
 
 connectDB();
@@ -12,6 +12,9 @@ const app = express();
 
 app.use(express.json());
 app.use(morgan('dev'));
+
+app.use('/api/v1/user', require("./routes/UserRouters"));
+
 
 app.get("/", (req, res) =>{
     res.status(200).send({
